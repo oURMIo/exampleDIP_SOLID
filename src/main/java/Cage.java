@@ -1,3 +1,3 @@
 public interface Cage {
-    void sendCage(Animal animal);
+    void sendCage(Cage cage);
 }

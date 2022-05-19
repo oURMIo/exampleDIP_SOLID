@@ -3,10 +3,18 @@ public class Main {
         Dog dog = new Dog();
         Wolf wolf = new Wolf();
 
-        dog.print();
-        dog.sendCage(new Dog());
+        dog.sendCage(new Cage() {
+            @Override
+            public void sendCage(Cage cage) {
 
-        wolf.print();
-        wolf.sendCage(new Wolf());
+            }
+        });
+
+        wolf.sendCage(new Cage() {
+            @Override
+            public void sendCage(Cage cage) {
+
+            }
+        });
     }
 }

@@ -1,15 +1,9 @@
-public class Dog extends Animal implements Cage{
-    public Dog() {
-        super("Dog", false);
-    }
+public class Dog implements Cage{
+    String name = "Dog";
+//    boolean danger = false;
 
     @Override
-    public void sendCage(Animal animal) {
-        System.out.printf("Send it in ");
-        if (animal.danger){
-            System.out.printf(" specially cage %n %n");
-        } else {
-            System.out.printf(" usually cage %n %n");
-        }
+    public void sendCage(Cage cage) {
+        System.out.printf(" It's a %s. send it in usually cage %n", name);
     }
 }

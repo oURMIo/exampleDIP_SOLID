@@ -1,15 +1,9 @@
-public class Wolf extends Animal implements Cage{
-    public Wolf() {
-        super("Wolf",true);
-    }
+public class Wolf implements Cage{
+    String name = "Wolf";
+//    boolean danger = false;
 
     @Override
-    public void sendCage(Animal animal) {
-        System.out.printf("Send it in ");
-        if (animal.danger){
-            System.out.printf(" specially cage %n %n");
-        } else {
-            System.out.printf(" usually cage %n %n");
-        }
+    public void sendCage(Cage cage) {
+        System.out.printf(" It's a %s. send it in specially cage %n", name);
     }
 }
